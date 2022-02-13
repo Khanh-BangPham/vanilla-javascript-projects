@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="radio-group">
+            <input type="radio" name="question" id="question-1" class="question" value="question-1">
+            <label for="question-1">Câu 1</label>
+            <input type="radio" name="question" id="question-2" class="question" value="question-2">
+            <label for="question-1">Câu 2</label>
+            <input type="radio" name="question" id="question-3" class="question" value="question-3">
+            <label for="question-1">Câu 3</label>
+        </div>
+        <div class="accordions">
+            <div class="accordions-header">
+                <span class="active">Câu 1</span>
+                <span>Câu 2</span>
+                <span>Câu 3</span>
+            </div>
+            <div class="accordions-content">
+                <h5>Khi truy cập 1 trang web trình duyệt sẽ làm gì?</h5>
+                <span></span>
+                <p><i> 1. Khi truy cập trang web, trình duyệt sẽ gọi tới máy chủ DNS để biên dịch URL trang web thành một địa chỉ IP, mỗi trang web có địa chỉ IP riêng biệt. Khi tìm thấy địa chỉ IP của trang web chúng ta đang vào, địa chỉ IP đó sẽ được trả về cho trình duyệt. <br> 2. Trình duyệt sẽ sử dụng địa chi IP đó để yêu cầu HTTP gọi tới Server lưu trữ trang web đó. Nó sẽ kết nối cổng số 80 trên Server bằng giao thức TCP/IP. <br> 3. Nếu Server chấp nhận thì sẽ gửi lại thông báo "200 OK". Và sau đó trình duyệt sẽ truy xuất mã HTML của trang web cụ thể được yêu cầu. <br> 4. Khi trình duyệt của bạn nhận được mã HTML đó từ Server thì nó sẽ hiển thị ra cửa sổ của trình duyệt một trang web hoàn chỉnh - awesome! <br> 5. Khi chúng ta đóng trình duyệt thì quá trình kết nối với Server sẽ kết thúc. </i></p>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

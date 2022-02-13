@@ -1,0 +1,16 @@
+[{
+    "id": 0,
+    "question": "Khi truy cập 1 trang web trình duyệt sẽ làm gì?",
+    "answer": "<i> 1. Khi truy cập trang web, trình duyệt sẽ gọi tới máy chủ DNS để biên dịch URL trang web thành một địa chỉ IP, mỗi trang web có địa chỉ IP riêng biệt. Khi tìm thấy địa chỉ IP của trang web chúng ta đang vào, địa chỉ IP đó sẽ được trả về cho trình duyệt. <br> 2. Trình duyệt sẽ sử dụng địa chi IP đó để yêu cầu HTTP gọi tới Server lưu trữ trang web đó. Nó sẽ kết nối cổng số 80 trên Server bằng giao thức TCP/IP. <br> 3. Nếu Server chấp nhận thì sẽ gửi lại thông báo \"200 OK\". Và sau đó trình duyệt sẽ truy xuất mã HTML của trang web cụ thể được yêu cầu. <br> 4. Khi trình duyệt của bạn nhận được mã HTML đó từ Server thì nó sẽ hiển thị ra cửa sổ của trình duyệt một trang web hoàn chỉnh - awesome! <br> 5. Khi chúng ta đóng trình duyệt thì quá trình kết nối với Server sẽ kết thúc. <i/>"
+},
+{
+    "id": 1,
+    "question": "Để sử dụng CSS position: absolute; thì cần điều kiện gì?",
+    "answer": "<i> Phần tử sử dụng CSS position: absolute; phải có một phần tử mẹ là kiểu position: relative;. <i/>"
+},
+{
+    "id": 2,
+    "question": "Callback & Promise trong JavaScript dùng để làm gì?",
+    "answer": "<b> Callback: </b> <br> <i> 1. Callback sẽ được gọi để thực thi bên trong một hàm khác. Điều này giúp chúng ta thực hiện một chuỗi các hành động (hàm) liên tiếp nhau. </i> <br> <i> 2. Callback rất hữu dụng khi xử lý sự kiện (event). Tức là chức năng đó sẽ được gọi ở một thời điểm nào đó khi event được kích hoạt. VD: click cái button thì hiển thị modal. </i> <br> <i> 3. Khi callback được truyền vào hàm như một tham số. Điều này sẽ tăng tính linh động hơn, tuỳ vào trường hợp cụ thể mà bạn sẽ định nghĩa các hàm callback khác nhau để truyền vào. </i> <br> <i> 4. Callback còn thường được dùng trong các method của các object, array như các phương thức map, reduce, find, … </i> <br> <b> Promise: </b> <br> <i> 1. Promise là một cơ chế trong JavaScript giúp bạn thực thi các tác vụ bất đồng bộ mà không rơi vào callback hell hay pyramid of doom, là tình trạng các hàm callback lồng vào nhau ở quá nhiều tầng.</i> <br> <i> 2. Cơ chế hoạt động: <br> - Khởi tạo một promise thông qua từ khoá new => new Promise().<br> - Một promise nhận vào một hàm (executor) với 2 tham số cũng là 2 hàm là resolve và reject. Resolve dùng để trả dữ liệu về khi xử lý logic thành công. Reject dùng để trả lỗi khi xử lý thất bại. <br> - Dùng .then(callback) để nhận kết quả trả về từ resolve (thành công).<br> - Dùng .catch(callback) để nhận kết quả trả về từ reject (bắt lỗi).<br> - Dùng .finally() để xử lý logic trong mọi trường hợp sau khi này hoàn thành (luôn chạy).</i>"
+}
+]

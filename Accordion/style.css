@@ -1,0 +1,82 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    margin: 0;
+}
+
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70vw;
+    height: 85vh;
+}
+
+.container .radio-group{
+    margin-bottom: 50px;
+}
+
+.container .radio-group .question{
+    cursor: pointer;
+    margin: 2px;
+    width: 15px;
+    height: 15px;
+}
+
+.container .radio-group label{
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 50px;
+    margin-left: 10px;
+}
+
+.container .accordions{
+
+}
+
+.container .accordions .accordions-header{
+    display: inline-flex;        
+}
+
+.container .accordions .accordions-header span{
+    border: 1px rgb(156, 156, 156) solid;
+    padding: 10px 20px;
+    background: #e6e6e6;
+}
+
+.container .accordions .accordions-header span.active{
+    background: #ffffff;
+    border: 1px rgb(219, 219, 219) solid;
+}
+
+.container .accordions .accordions-content{
+    position: relative;
+    border: 1px rgb(219, 219, 219) solid;
+}
+
+.container .accordions .accordions-content span{
+    content: "";
+    width: 100%;
+    height: 0.5px;
+    background: rgb(219, 219, 219);
+    display: block;
+}
+
+.container .accordions .accordions-content h5, .container .accordions .accordions-content p{
+    margin: 2em;
+}
+
+.container .accordions .accordions-content h5{
+   font-size: 15px;
+}
+
+.container .accordions .accordions-content p{
+    color: rgb(122, 122, 122);
+}
+
