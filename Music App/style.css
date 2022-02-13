@@ -1,0 +1,652 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
+html, body, h1, h2{
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html, body, h1, h2, p{
+    margin: 0;
+}
+
+body{
+    background: linear-gradient(to right, #4e31c2, #88887c);
+    width: auto;
+    height: auto;
+}
+
+img{
+    width: 100%;
+}
+
+.navbar{
+    position: fixed;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 50px;
+    height: 200px;
+    padding: 10px 0;
+    background: #432275;
+    border-radius: 40px;
+    font-weight: bolder;
+    box-shadow: 0 0 2px #000000, 0 0 10px #000000;
+}
+
+.navbar p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    height: 120px;
+    color: #ffffff;
+    width: 100%;
+    background: #88887c;
+    padding: 10px 0;
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000;
+    transition: all 0.5s;
+    transform: translateY(100%);
+}
+
+.navbar i{
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.navbar p.active{
+    transform: translateY(0);
+    display: flex;
+}
+
+.filter{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    z-index: 100;
+}
+.filter .filter-group{
+    width: 50%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    border-radius: 20px;
+    background: linear-gradient(to right, #4e31c2, #88887c);
+    margin-top: 40px;
+}
+
+.filter .filter-group i{
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 100;
+    font-size: 25px;
+    color: #ffffff;
+    margin-left: 20px;
+    margin-right: 10px;
+    overflow: hidden;
+}
+.filter .filter-group #filterInput{
+    width: calc(100% - 30px);
+    height: 95%;
+    border: none;
+    background: linear-gradient(to right, #543abb, #88887c);
+    border-radius: 20px;
+    color: #ffffff;
+}
+.filter .filter-group #filterInput::placeholder{
+    color: #ffffff;
+}
+
+
+.filter .filter-group #filterInput:focus-visible{
+    border: none;
+    outline: none;
+}
+
+.filter .result-filter{
+    width: 50%;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    background: #432275;
+    opacity: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.filter .result-filter .result-filter__item{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+.filter .result-filter .result-filter__item:hover{
+    background: rgb(0, 0, 0, 0.2);
+}
+
+.filter .result-filter .result-filter__item .avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin-right: 30px;
+}
+.filter .result-filter .result-filter__item .avatar a{
+    position: absolute;
+    cursor: pointer;
+    z-index: 0;
+    font-family: "Font Awesome 5 Pro";
+    font-size: 20px;
+    width: 100%;
+    padding: 10px;
+    color: #ffffff;
+    font-weight: 900;
+    transition: all 0.5s;
+    opacity: 0;
+}
+.filter .result-filter .result-filter__item .avatar a:hover{
+    opacity: 0.7;
+    transition: all 0.5s;
+}
+
+.filter .result-filter .result-filter__item .avatar img{
+    position: absolute;
+}
+.filter .result-filter .result-filter__item .infomation .title{
+    font-size: 18px;
+    color: #fff;
+}
+.filter .result-filter .result-filter__item .infomation .title:hover{
+    color: rgb(226, 17, 198);
+}
+.filter .result-filter .result-filter__item .infomation p{
+    font-size: 12px;
+    color: #919191;
+}
+
+.slider .slider__top100
+{
+    position: relative;
+    display: flex;
+    padding-top: 150px;
+    z-index: 0;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+    display: none;
+}
+
+.slider .slider__top100 .slider__top100-item{
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    opacity: 0.6;
+    width: 250px;
+    z-index: 0;
+    transition: all 0.5s;
+    display: none;
+}
+
+.slider .slider__top100 .slider__top100-item .fa-play{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
+    color: #ffffff;
+    opacity: 0.5;
+    transition: all 0.5s;
+}
+
+.slider .slider__top100 .slider__top100-item.active:hover .fa-play{
+    opacity: 1;
+}
+
+.slider .slider__top100 .slider__top100-item.left{
+    display: block;
+    top: 230px;
+    left: 30%;
+    transform: translateX(-30%);
+}
+
+.slider .slider__top100 .slider__top100-item.right{
+    display: block;
+    top: 230px;
+    left: 70%;
+    transform: translateX(-70%);
+}
+.slider .slider__top100 .slider__top100-item.active{
+    display: block;
+    opacity: 1;
+    width: 350px;
+    top: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slider .slider__top100 .slider__top100-item .image{
+    width: 100%;
+    height: 100%;
+}
+
+.slider .slider__songs{
+    position: relative;
+    display: flex;
+    padding-top: 150px;
+    z-index: 0;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+    display: none;
+}
+.slider .slider__songs.active{
+    display: block;
+    transition: all 0.5s;
+}
+.slider .slider__top100.active{
+    display: block;
+    transition: all 0.5s;
+}
+.slider .slider__songs .slider__songs-item{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 280px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    opacity: 0.6;
+    z-index: 0;
+    transition: all 0.5s;
+    display: none;
+}
+
+.slider .slider__songs .slider__songs-item .fa-play{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: #ffffff;
+    opacity: 0.5;
+    transition: all 0.5s;
+}
+.slider .slider__songs .slider__songs-item.active:hover .fa-play{
+    opacity: 1;
+    transition: all 0.5s;
+}
+.slider .slider__songs .slider__songs-item.left{
+    display: block;
+    top: 280px;
+    left: 40%;
+    transform: translateX(-40%);
+    z-index: 1;
+}
+
+.slider .slider__songs .slider__songs-item.right{
+    display: block;
+    top: 280px;
+    left: 60%;
+    transform: translateX(-60%);
+    z-index: 1;
+}
+.slider .slider__songs .slider__songs-item.left-1{
+    width: 130px;
+    display: block;
+    top: 290px;
+    left: 35%;
+    transform: translateX(-35%);
+    z-index: 0;
+}
+
+.slider .slider__songs .slider__songs-item.right-1{
+    width: 130px;
+    display: block;
+    top: 290px;
+    left: 65%;
+    transform: translateX(-65%);
+    z-index: 0;
+}
+.slider .slider__songs .slider__songs-item.active{
+    display: block;
+    opacity: 1;
+    width: 200px;
+    height: 200px;
+    top: 260px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    border: 2px #000000 solid;
+    background: #000000;
+}
+
+.slider .slider__songs .slider__songs-item .container{
+    position: relative;
+}
+
+/* .slider .slider__songs .slider__songs-item .container .infomation{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.slider .slider__songs .slider__songs-item .container .infomation p{
+    text-align: center;
+}
+
+.slider .slider__songs .slider__songs-item .container .infomation .title{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.slider .slider__songs .slider__songs-item .container .infomation .author{
+    color: #000000;
+    font-weight: bolder;
+} */
+.player {
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    width: 100%;
+    color: #ffffff;
+}
+
+.player .toolbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: #432275;
+    transform: translateY(100%);
+    transition: all 1s ease-in;
+}
+
+.player .toolbar .songInfos{
+    flex: 0 0 30%;
+    display: flex;
+    align-items: center;
+}
+
+.player .toolbar .songInfos .avatar{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.player .toolbar .songInfos .avatar:hover i{
+    opacity: 1 !important;
+    transition: all 0.5s;
+}
+
+
+.player .toolbar .songInfos .avatar img, .player .toolbar .songInfos .avatar i{
+    position: absolute;
+    font-size: 25px;
+    font-weight: 300;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s;
+}
+
+.player .toolbar .songInfos .avatar img{
+    border-radius: 10px;
+}
+
+.player .toolbar .songInfos .infomation{
+    margin-left: 30px;
+}
+
+.player .toolbar .songInfos .infomation .title{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.player .toolbar .songInfos .infomation p{
+    font-size: 12px;
+    color: #919191;
+}
+
+.player .toolbar .control{
+    flex: 0 0 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+}
+.player .toolbar .control .control-buttons{
+    display: flex;
+    align-items: center;
+    
+}
+
+.player .toolbar .control .control-buttons i{
+    cursor: pointer;
+    font-weight: 500;
+    margin: 10px 20px;
+    max-width: 25px;
+    border-radius: 50%;
+}
+
+.player .toolbar .control .control-buttons i:hover{
+    color: rgb(226, 17, 198);
+}
+
+.player .toolbar .control .control-buttons i.active{
+    color: rgb(226, 17, 198);
+}
+
+.player .toolbar .control .control-buttons .circle-group{
+    position: relative;
+    height: 50px;
+    max-width: 50px;
+    width: 50px;
+}
+
+.player .toolbar .control .control-buttons .circle-group .fa-play-circle,
+.player .toolbar .control .control-buttons .circle-group .fa-pause-circle{
+    position: absolute;
+    font-size: 50px;
+    font-weight: lighter;
+    transition: all 0.5s;
+    top: 0;
+    left: 0;
+    margin: 0;
+    transition: all 0.5;
+    max-width: 50px;
+}
+
+.player .toolbar .control .control-buttons .circle-group .fa-pause-circle{
+    opacity: 0;
+}
+
+.player .toolbar .control .control-progresstion{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    font-size: 15px;
+}
+
+.player .toolbar .control .control-progresstion .timer-line{
+    content: '';
+    width: 70%;
+    height: 2px;
+    background: #919191;
+    display: inline;
+    position: initial;
+    cursor: pointer;
+}
+.player .toolbar .control .control-progresstion .timer-line .timer-line-current{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #ffffff;
+    display: block;
+    position: initial;
+    transition: all 0.5s;
+}
+.player .toolbar .properties{
+    flex: 0 0 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player .toolbar .properties i{
+    cursor: pointer;
+    margin: 0 10px;
+}
+.player .toolbar .properties i:hover{
+    color: rgb(226, 17, 198);
+}
+.player .toolbar .properties .dotted span, 
+.player .toolbar .properties .dotted::before,
+.player .toolbar .properties .dotted::after{
+    content: '';
+    width: 5px;
+    height: 5px;
+    background: #ffffff;
+    display: inline;
+    border-radius: 50%;
+}
+
+.player .toolbar .properties .dotted{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+.player .toolbar .properties .dotted:hover span,
+.player .toolbar .properties .dotted:hover::before,
+.player .toolbar .properties .dotted:hover::after{
+    background: rgb(226, 17, 198);
+}
+
+.player .toolbar .properties .dotted::before{
+    position: absolute;
+    left: 15px;
+}
+.player .toolbar .properties .dotted span{
+    position: absolute;
+}
+.player .toolbar .properties .dotted::after{
+    position: absolute;
+    left: 30px;
+}
+.player .toolbar .properties .fa-heart{
+    position: relative;
+}
+.player .toolbar .properties .fa-heart.active{
+    color: red;
+}
+.player .toolbar .properties .fa-heart.active:hover{
+    color: rgb(226, 17, 198);
+}
+.player .toolbar .properties .fa-heart span{
+    position: absolute;
+    color: #fff;
+    opacity: 0;
+    display: none;
+    width: 80px;
+    height: 27px;
+    padding-top: 10px;
+    text-align: center;
+    transition: all 0.5s;
+    background: rgba(0, 0, 0, 0.8);
+    top: -50px;
+    left: -32px;
+    border-radius: 10px;
+}
+.player .toolbar .properties .fa-heart:hover span{
+    opacity: 1;
+    color: #fff;
+    transition: all 0.5s;
+    display: block;
+}
+.player .toolbar .properties .fa-heart span::before{
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    border-top: 13px solid rgba(0, 0, 0, 0.8);
+    display: block;
+    position: absolute;
+    bottom: -13px;
+    left: 27px;
+}
+.player .toolbar .properties .volume{
+    position: relative;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.player .toolbar .properties .volume:hover .volume-line{
+    opacity: 1;
+}
+
+.player .toolbar .properties .volume .volume-line{
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 70px;
+    background: #919191;
+    display: block;
+    left: -17px;
+    top: 0;
+    padding-bottom: 2px;
+    opacity: 0;
+}
+
+.player .toolbar .properties .volume .volume-line:hover,
+.player .toolbar .properties .volume .volume-line:hover span{
+    height: 3px;
+    border-radius: 5px;
+}
+.player .toolbar .properties .volume .volume-line span{
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 100%;
+    background: #ffffff;
+    display: block;
+    left: 0;
+    top: 0;
+    padding-bottom: 2px;
+}
+
+.player .toolbar .properties .volume .fa-volume-up,
+.player .toolbar .properties .volume .fa-volume-mute{
+    display: none !important;
+}
+
+.player .toolbar .properties .volume .fa-volume-up.active,
+.player .toolbar .properties .volume .fa-volume-mute.active{
+    display: block !important;
+}
+

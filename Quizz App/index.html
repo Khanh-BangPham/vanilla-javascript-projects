@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz App</title>
+</head>
+
+<body>
+    <section class="quiz">
+        <div class="container">
+            <form action="" class="quiz-form" id="quiz-form">
+                <h2 class="question"></h2>
+                <ul>
+                    <li> <input type="radio" name="answer" id="a" class="answer" value="Java">
+                        <label for="answer" id="answer-a"></label>
+                    </li>
+                    <li> <input type="radio" name="answer" id="b" class="answer" value="C">
+                        <label for="answer" id="answer-b"></label>
+                    </li>
+                    <li> <input type="radio" name="answer" id="c" class="answer" value="Phython">
+                        <label for="answer" id="answer-c"></label>
+                    </li>
+                    <li> <input type="radio" name="answer" id="d" class="answer" value="JavaScript">
+                        <label for="answer" id="answer-d"></label>
+                    </li>
+                </ul>
+                <button type="submit" id="buttonSubmit">SUBMIT</button>
+            </form>
+            <div class="score" style="display: none;">
+                <h2>You answered 1/4 questions correctly</h2>
+                <button id="buttonReload">RELOAD</button>
+            </div>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+
+</html>

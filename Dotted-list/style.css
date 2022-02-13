@@ -1,0 +1,83 @@
+html {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.dottedList {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dottedList::before {
+    content: "";
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    background: #e0e0e0;
+    display: inline;
+    z-index: -1;
+}
+
+.dottedList #active-line{
+    display: none;
+    content: "";
+    width: 0%;
+    height: 4px;
+    position: absolute;
+    background: #3498db;
+    display: inline;
+    z-index: -1;
+    transition: all 0.5s;
+}
+.dottedList .dottedList__item {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: white;
+    color: #8b7c7c;
+    border: 3px #e0e0e0 solid;
+    border-radius: 50%;
+    display: inline;
+    text-align: center;
+    position: relative;
+    transition: all 0.5s;
+}
+
+
+.dottedList .dottedList__item.active {
+    border: 2.5px #3498db solid;
+    transition: all 0.5s;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons__item {
+    padding: 10px 40px;
+    border-radius: 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.buttons__item.--left {
+    background: none;
+}
+.buttons__item.--right {
+    background: #3498db;
+}

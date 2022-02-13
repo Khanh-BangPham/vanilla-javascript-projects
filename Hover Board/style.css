@@ -1,0 +1,36 @@
+html, body{
+    position: relative;
+    margin: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50vw;
+    max-width: 400px;
+    max-height: 500px;
+    height: 70vh;
+    position: relative;
+}
+
+.square{
+    content: "";
+    background: #1d1d1d;
+    box-shadow: 0 0 2px #000;
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin: 2px;
+    transition: 3s ease;
+}
+
+.square:hover{
+    transition-duration: 0s;
+}
