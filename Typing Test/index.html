@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Typing game</title>
+</head>
+<body>
+    <header>
+        <div class="title">Độ khó: </div>
+        <div class="difficulty">
+            <div class="nav-current">
+                Thường
+            </div>
+            <div class="nav">
+                <div class="nav-item" data="Dễ">Dễ</div>
+                <div class="nav-item" data="Thường">Thường</div>
+                <div class="nav-item" data="Khó">Khó</div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="logo">TYPING GAME</div>
+            <div class="gaming active">
+                <div class="time-left">
+                    <p>Thời gian: </p>
+                    <span class="timing">10 s</span>
+                </div>
+                <div class="score">
+                    <p>Điểm: </p>
+                    <span>0</span>
+                </div>
+                <div class="typing-container">
+                    <p class="instruction">Nhập các từ sau:</p>
+                    <p class="words">
+                        <span id="word-1">
+                        </span>
+                        <span id="word-2">
+                        </span>
+                    </p>
+                    <input type="text" name="typing" id="typing" autocomplete="off">
+                </div>
+            </div>
+            <div class="gameOver">
+                <div class="result">
+                    <p class="score">Điểm: <span> 10. </span></p>
+                    <p class="totalTime">Tổng thời gian: <span>10s.</span></p>
+                </div>
+                <button>RELOAD</button>
+            </div>
+        </div>
+        <button id="settings-btn" class="settings-btn">
+            <i class="fas fa-cog"></i>
+        </button>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+html{
+    position: relative;
+}
+
+body{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 20px;
+    background: #CAF0F8;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #03045E;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    transform: translateY(-100%);
+    transition: all 1s;
+}
+header.active {
+    transform: translateY(0);
+    transition: all 1s;
+}
+header .title{
+    margin-right: 50px;
+}
+
+header .title .difficulty {
+
+}
+
+header .difficulty .nav-current{
+    cursor: pointer;
+    text-align: center;
+    background: #90E0EF;
+    width: 200px;
+    color: black;
+    border-bottom: 1px #000 solid;
+}
+
+header .difficulty .nav{
+    width: 200px;
+    position: fixed;
+    text-align: center;
+    background: #CAF0F8;
+    color: black;
+    border-radius: 5px;
+    opacity: 0;
+    transition: all 0.5s;
+}
+header .difficulty .nav.active{
+    opacity: 1;
+}
+header .difficulty .nav .nav-item{
+    cursor: pointer;
+    border-bottom: 1px #000 solid;
+}
+header .difficulty .nav .nav-item:hover{
+    background: #00B4D8;
+}
+.settings-btn{
+    position: fixed;
+    width: 50px;
+    height: 24.2px;
+    cursor: pointer;
+    bottom: 30px;
+    left: 30px;
+    z-index: 100;
+}
+section{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+section .container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #00B4D8;
+    width: 50%;
+}
+
+section .container .logo{
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    background: #03045E;
+}
+
+
+section .container .gaming{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    display: none;
+}
+section .container .gaming.active{
+    display: block;
+}
+section .container .time-left{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    margin: 20px;
+}
+
+section .container .gaming .score{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    margin: 20px;
+}
+section .container .time-left span, section .container .score span{
+    margin: 1em 10px;
+    
+}
+section .container .typing-container{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+section .container .typing-container p{
+    margin: 0;   
+}
+section .container .typing-container .instruction{
+    background: #03045E;
+    width: 10em;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+section .container .typing-container .words{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+section .container .typing-container span{
+    margin: 0 10px;
+    padding: 10px;
+}
+section .container .typing-container #word-1{
+    background: #dddddd;
+    color: #000;
+    font-weight: 600;
+}
+section .container .typing-container .words #word-2{
+    font-weight: 600;
+}
+section .container .typing-container #typing{
+    width: 70%;
+    height: 40px;
+    font-size: 1.3em;
+    padding: 0 5px;
+    border-bottom: 2px #575757 solid;
+}
+section .container .typing-container #typing:focus-visible{
+    outline: none;
+}
+
+section .container .gameOver{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+section .container .gameOver.active{
+    display: flex;
+}
+section .container .gameOver .result{
+    display: flex;
+    margin-bottom: 40px;
+}
+
+section .container .gameOver .result p{
+    margin: 1rem;
+}
+
+section .container .gameOver button{
+    cursor: pointer;
+    font-size: 15px;
+    width: 7em;
+    height: 2em;
+}
