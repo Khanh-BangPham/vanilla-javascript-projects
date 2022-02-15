@@ -12,4 +12,5 @@
 | 07 | [Music App](https://github.com/Khanh-BangPham/vanilla-javascript-projects/tree/master/Music%20App) | [Live Project](https://project-music-application.netlify.app) |
 | 08 | [Pokedex Laziloading](https://github.com/Khanh-BangPham/vanilla-javascript-projects/tree/master/PokeDex%20-%20Laziloading) | [Live Project](https://project-pokedex-laziloading.netlify.app) |
 | 09 | [Quizz App](https://github.com/Khanh-BangPham/vanilla-javascript-projects/tree/master/Quizz%20App) | [Live Project](https://project-quizz-application.netlify.app) |
+| 10 | [Typing Test](https://github.com/Khanh-BangPham/vanilla-javascript-projects/tree/master/Typing%20Test) | [Live Project](https://project-typing-test.netlify.app) |
 
