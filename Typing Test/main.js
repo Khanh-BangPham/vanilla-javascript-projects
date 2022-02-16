@@ -149,3 +149,4 @@ buttonReload.addEventListener("click", () => {
     gameOverElm.classList.remove("active");
     gameStart(false);
 })
+
