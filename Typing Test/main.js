@@ -3,7 +3,9 @@ let nav = document.querySelector("header .difficulty .nav");
 let navItems = document.querySelectorAll("header .difficulty .nav .nav-item");
 let difficulty = 1;
 let header = document.querySelector("header");
-let settingBtn = document.querySelector(".settings-btn");
+let settingBtn = document.querySelector("#settings-btn");
+let repeatBtn = document.querySelector("#repeat-btn");
+
 navCurrent.addEventListener('click', () => {
     if(nav.classList.contains("active")){
         nav.classList.remove("active");
@@ -32,6 +34,10 @@ settingBtn.addEventListener("click", () => {
     } else{
         header.classList.add("active");
     }
+})
+
+repeatBtn.addEventListener("click", () => {
+    gameStart(true);
 })
 
 let data = [
@@ -108,7 +114,17 @@ let typingFunction = () => {
 }
 
 
-let gameStart = () => {
+let gameStart = (isRepeat) => {
+    time = maxTime;
+    totalTime = maxTime;
+    score = 0;
+    firstWord = getRandomWord();
+    secondWord = getRandomWord();
+    firstWordElm.innerHTML = firstWord;
+    secondWordElm.innerHTML = secondWord;
+    tyingInput.value = '';
+    timingElm.innerHTML = time + 's';
+    scoreElm.innerHTML = score;
     tyingInput.focus();
     typingFunction();
     let updateTime = () => {
@@ -125,25 +141,11 @@ let gameStart = () => {
     }
     
     let timeInterval = setInterval(updateTime , 1000);
+    if(isRepeat) clearInterval(timeInterval);
 }
 gameStart();
 buttonReload.addEventListener("click", () => {
-    time = maxTime;
-    totalTime = maxTime;
-    score = 0;
-    firstWord = getRandomWord();
-    secondWord = getRandomWord();
-    firstWordElm.innerHTML = firstWord;
-    secondWordElm.innerHTML = secondWord;
-    tyingInput.value = '';
-    timingElm.innerHTML = time + 's';
-    scoreElm.innerHTML = score;
     gamingElm.classList.add("active");
     gameOverElm.classList.remove("active");
-    gameStart();
+    gameStart(false);
 })
-
-
-
-
-
